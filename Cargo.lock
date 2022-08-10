@@ -19,10 +19,22 @@ checksum = "f26201604c87b1e01bd3d98f8d5d9a8fcbb815e8cedb41ffccbeb4bf593a35fe"
 
 [[package]]
 name = "ahash"
-version = "0.7.5"
+version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "991984e3fd003e7ba02eb724f87a0f997b78677c46c0e91f8424ad7394c9886a"
+checksum = "fcb51a0695d8f838b1ee009b3fbf66bda078cd64590202a864a8f3e8c4315c47"
 dependencies = [
+ "getrandom",
+ "once_cell",
+ "version_check",
+]
+
+[[package]]
+name = "ahash"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "57e6e951cfbb2db8de1828d49073a113a29fd7117b1596caa781a258c7e38d72"
+dependencies = [
+ "cfg-if 1.0.0",
  "getrandom",
  "once_cell",
  "version_check",
@@ -101,7 +113,7 @@ name = "arrow2"
 version = "0.5.3"
 source = "git+https://github.com/datafuse-extras/arrow2?rev=3f3d76c#3f3d76ca4a0ba8e6e1a575fdfac93b8039b395b7"
 dependencies = [
- "ahash",
+ "ahash 0.7.6",
  "base64",
  "chrono",
  "csv",
@@ -876,7 +888,7 @@ dependencies = [
 name = "common-datablocks"
 version = "0.1.0"
 dependencies = [
- "ahash",
+ "ahash 0.8.0",
  "comfy-table",
  "common-arrow",
  "common-datavalues",
@@ -889,7 +901,7 @@ dependencies = [
 name = "common-datavalues"
 version = "0.1.0"
 dependencies = [
- "ahash",
+ "ahash 0.8.0",
  "chrono",
  "chrono-tz 0.6.0",
  "comfy-table",
@@ -1562,7 +1574,7 @@ dependencies = [
 name = "databend-query"
 version = "0.1.0"
 dependencies = [
- "ahash",
+ "ahash 0.8.0",
  "async-compat",
  "async-trait",
  "axum",
@@ -2329,7 +2341,7 @@ version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6bb81d22191b89b117cd12d6549544bfcba0da741efdcec7c7d2fd06a0f56363"
 dependencies = [
- "ahash",
+ "ahash 0.7.6",
  "hashbrown",
 ]
 
@@ -2381,7 +2393,7 @@ version = "0.11.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ab5ef0d4909ef3724cc8cce6ccc8572c5c817592e9285f5464f8e86f8bd3726e"
 dependencies = [
- "ahash",
+ "ahash 0.7.6",
 ]
 
 [[package]]
@@ -2634,7 +2646,7 @@ version = "0.10.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bfa5bd9a10b38bf5f3c670f9d75c194adbecd2b1573f737668ab8599f41edc87"
 dependencies = [
- "ahash",
+ "ahash 0.7.6",
  "atty",
  "indexmap",
  "itoa",
@@ -3137,7 +3149,7 @@ version = "0.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a00f42f354a2ed4894db863b3a4db47aef2d2e4435b937221749bd37a8a7aaa8"
 dependencies = [
- "ahash",
+ "ahash 0.7.6",
  "metrics-macros",
  "proc-macro-hack",
 ]
@@ -3178,7 +3190,7 @@ version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a58e622a425b7308e73e4390c68b8cb3df4443f2a57495e391b978412531638c"
 dependencies = [
- "ahash",
+ "ahash 0.7.6",
  "aho-corasick",
  "atomic-shim",
  "crossbeam-epoch 0.9.5",
@@ -4496,7 +4508,7 @@ version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "98f2771d255fd99f0294f13249fecd0cae6e074f86b4197ec1f1689d537b44d3"
 dependencies = [
- "ahash",
+ "ahash 0.7.6",
  "griddle",
  "hashbrown",
 ]
@@ -6093,9 +6105,9 @@ dependencies = [
 
 [[package]]
 name = "version_check"
-version = "0.9.3"
+version = "0.9.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5fecdca9a5291cc2b8dcf7dc02453fee791a280f3743cb0905f8822ae463b3fe"
+checksum = "49874b5167b65d7193b8aba1567f5c7d93d001cafc34600cee003eda787e483f"
 
 [[package]]
 name = "wait-timeout"
